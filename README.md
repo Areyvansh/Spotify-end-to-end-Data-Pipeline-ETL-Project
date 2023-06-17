@@ -22,3 +22,18 @@ This API contains information about the Music Artist, Albums annd the Songs retr
 5. **Data Catalog:** AWS Glue Data Catalog is a fully managed MetaData Repository that makes it easy to discover and manage Data in AWS. You can use the Glue Data Catalog with other AWS Services, such as Athena.
 
 6. **AWS Athena:** AWS Athena is an interactive query service that makes it easy to analyse Data in Amazon S3 using standard SQL. You can use Athena to analyse Data inn your Glue Data Catalog or in other S3 Buckets    
+
+## Install Packages
+```
+pip install pandas
+pip install numpy
+pip install spotipy
+```
+## Project Execution Flow
+1. Extract Data from API
+2. Lambda Trigger (every 1 hour)
+3. Run Extract Code
+4. Store Raw Data
+5. Trigger Transform Function
+6. Transform Data and Load it
+7. Query using Athena
